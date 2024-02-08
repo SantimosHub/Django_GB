@@ -1,0 +1,56 @@
+INFO 29-01-2024 14:03:52 autoreload Watching for file changes with StatReloader
+INFO 29-01-2024 14:03:57 basehttp "GET / HTTP/1.1" 200 10664
+INFO 29-01-2024 14:26:29 autoreload Watching for file changes with StatReloader
+ERROR 29-01-2024 14:26:44 log Internal Server Error: /
+Traceback (most recent call last):
+  File "F:\Python\django_homework_first_project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Python\django_homework_first_project\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Python\django_homework_first_project\about_me\about_app\views.py", line 11, in wrapper
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Python\django_homework_first_project\about_me\about_app\views.py", line 21, in index
+    text = lorem.paragraph(paragraph_length)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: paragraph() takes 0 positional arguments but 1 was given
+ERROR 29-01-2024 14:26:44 basehttp "GET / HTTP/1.1" 500 69377
+INFO 29-01-2024 14:27:53 autoreload F:\Python\django_homework_first_project\about_me\about_app\views.py changed, reloading.
+INFO 29-01-2024 14:27:54 autoreload Watching for file changes with StatReloader
+ERROR 29-01-2024 14:27:54 log Internal Server Error: /
+Traceback (most recent call last):
+  File "F:\Python\django_homework_first_project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Python\django_homework_first_project\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Python\django_homework_first_project\about_me\about_app\views.py", line 11, in wrapper
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Python\django_homework_first_project\about_me\about_app\views.py", line 21, in index
+    text = lorem.paragraph(3)
+           ^^^^^^^^^^^^^^^^^^
+TypeError: paragraph() takes 0 positional arguments but 1 was given
+ERROR 29-01-2024 14:27:54 basehttp "GET / HTTP/1.1" 500 69291
+INFO 29-01-2024 14:28:05 autoreload F:\Python\django_homework_first_project\about_me\about_app\views.py changed, reloading.
+INFO 29-01-2024 14:28:06 autoreload Watching for file changes with StatReloader
+INFO 29-01-2024 14:28:06 views The function index was returned: Посещена страница /
+INFO 29-01-2024 14:28:06 basehttp "GET / HTTP/1.1" 200 2698
+INFO 29-01-2024 14:28:13 views The function index was returned: Посещена страница /
+INFO 29-01-2024 14:28:13 basehttp "GET / HTTP/1.1" 200 922
+INFO 29-01-2024 14:28:15 views The function index was returned: Посещена страница /
+INFO 29-01-2024 14:28:15 basehttp "GET / HTTP/1.1" 200 2914
+INFO 29-01-2024 14:31:14 autoreload F:\Python\django_homework_first_project\about_me\about_app\views.py changed, reloading.
+INFO 29-01-2024 14:31:14 autoreload Watching for file changes with StatReloader
+INFO 29-01-2024 14:31:41 autoreload F:\Python\django_homework_first_project\about_me\about_app\views.py changed, reloading.
+INFO 29-01-2024 14:31:42 autoreload Watching for file changes with StatReloader
+INFO 29-01-2024 14:31:53 basehttp "GET /about HTTP/1.1" 301 0
+INFO 29-01-2024 14:31:53 views The function about was returned: Посещена страница /about/
+INFO 29-01-2024 14:31:53 basehttp "GET /about/ HTTP/1.1" 200 3248
+INFO 29-01-2024 14:32:03 views The function about was returned: Посещена страница /about/
+INFO 29-01-2024 14:32:03 basehttp "GET /about/ HTTP/1.1" 200 1995
+INFO 29-01-2024 14:32:45 views The function index was returned: Посещена страница /
+INFO 29-01-2024 14:32:45 basehttp "GET / HTTP/1.1" 200 1519
