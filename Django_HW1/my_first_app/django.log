@@ -1,0 +1,17 @@
+INFO 08-02-2024 13:51:52 autoreload Watching for file changes with StatReloader
+INFO 08-02-2024 13:51:54 views The function index was returned: Посещена страница /
+INFO 08-02-2024 13:51:54 basehttp "GET / HTTP/1.1" 200 199
+INFO 08-02-2024 13:51:58 views The function about was returned: Посещена страница /about/
+INFO 08-02-2024 13:51:58 basehttp "GET /about/ HTTP/1.1" 200 109
+INFO 08-02-2024 13:52:03 views The function index was returned: Посещена страница /
+INFO 08-02-2024 13:52:03 basehttp "GET / HTTP/1.1" 200 199
+INFO 08-02-2024 14:28:29 autoreload Watching for file changes with StatReloader
+INFO 08-02-2024 14:28:31 views The function index was returned: Посещена страница /
+INFO 08-02-2024 14:28:31 basehttp "GET / HTTP/1.1" 200 199
+INFO 08-02-2024 14:28:37 views The function about was returned: Посещена страница /about/
+INFO 08-02-2024 14:28:37 basehttp "GET /about/ HTTP/1.1" 200 109
+INFO 08-02-2024 14:34:39 autoreload Watching for file changes with StatReloader
+INFO 08-02-2024 14:34:44 views The function index was returned: Посещена страница /
+INFO 08-02-2024 14:34:44 basehttp "GET / HTTP/1.1" 200 199
+INFO 08-02-2024 14:35:10 views The function about was returned: Посещена страница /about/
+INFO 08-02-2024 14:35:10 basehttp "GET /about/ HTTP/1.1" 200 109
