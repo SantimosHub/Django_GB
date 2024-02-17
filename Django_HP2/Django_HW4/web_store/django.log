@@ -1,0 +1,383 @@
+INFO 15-02-2024 13:53:56 autoreload Watching for file changes with StatReloader
+INFO 15-02-2024 13:54:37 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\urls.py changed, reloading.
+INFO 15-02-2024 13:54:42 autoreload Watching for file changes with StatReloader
+INFO 15-02-2024 13:54:53 basehttp "GET / HTTP/1.1" 200 457
+WARNING 15-02-2024 13:54:53 log Not Found: /favicon.ico
+WARNING 15-02-2024 13:54:53 basehttp "GET /favicon.ico HTTP/1.1" 404 2716
+INFO 15-02-2024 15:15:22 autoreload Watching for file changes with StatReloader
+INFO 15-02-2024 15:15:25 basehttp "GET / HTTP/1.1" 200 457
+INFO 15-02-2024 15:16:19 basehttp "GET /customer-orders/1 HTTP/1.1" 200 488
+INFO 15-02-2024 15:16:29 basehttp "GET /customer-orders/2 HTTP/1.1" 200 488
+INFO 15-02-2024 15:16:36 basehttp "GET /customer-orders/3 HTTP/1.1" 200 792
+INFO 15-02-2024 15:17:11 basehttp "GET /ordered-products-by-period/3 HTTP/1.1" 200 1224
+INFO 17-02-2024 12:48:13 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 12:48:17 basehttp "GET / HTTP/1.1" 200 461
+WARNING 17-02-2024 12:48:17 log Not Found: /favicon.ico
+WARNING 17-02-2024 12:48:17 basehttp "GET /favicon.ico HTTP/1.1" 404 3209
+WARNING 17-02-2024 12:48:41 log Not Found: /about
+WARNING 17-02-2024 12:48:41 basehttp "GET /about HTTP/1.1" 404 3191
+INFO 17-02-2024 12:49:04 basehttp "GET /customer-orders/1 HTTP/1.1" 200 492
+ERROR 17-02-2024 12:49:28 log Internal Server Error: /customer-orders/4
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: store_app_product.image
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Developer\Django\Django_HP2\web_store\store_app\views.py", line 22, in fetch_customer_orders
+    return render(request, 'store_app/orders.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 197, in render
+    len_values = len(values)
+                 ^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1926, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: store_app_product.image
+ERROR 17-02-2024 12:49:28 basehttp "GET /customer-orders/4 HTTP/1.1" 500 228977
+INFO 17-02-2024 12:53:05 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 12:53:12 basehttp "GET /customer-orders/4 HTTP/1.1" 200 804
+WARNING 17-02-2024 12:53:47 log Not Found: /customer-orders/edit/1
+WARNING 17-02-2024 12:53:47 basehttp "GET /customer-orders/edit/1 HTTP/1.1" 404 3242
+INFO 17-02-2024 12:54:12 basehttp "GET /edit/1 HTTP/1.1" 301 0
+ERROR 17-02-2024 12:54:12 log Internal Server Error: /edit/1/
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Developer\Django\Django_HP2\web_store\store_app\views.py", line 104, in edit_product
+    return render(request, 'products/edit_product.html', {'form': form, 'product': product})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: products/edit_product.html
+ERROR 17-02-2024 12:54:12 basehttp "GET /edit/1/ HTTP/1.1" 500 83373
+INFO 17-02-2024 12:57:23 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 12:57:25 basehttp "GET / HTTP/1.1" 200 461
+WARNING 17-02-2024 12:57:29 log Not Found: /about
+WARNING 17-02-2024 12:57:29 basehttp "GET /about HTTP/1.1" 404 3191
+INFO 17-02-2024 12:57:33 basehttp "GET /add HTTP/1.1" 301 0
+ERROR 17-02-2024 12:57:33 log Internal Server Error: /add/
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Developer\Django\Django_HP2\web_store\store_app\views.py", line 80, in add_product
+    return render(request, 'products/add_product.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: products/add_product.html
+ERROR 17-02-2024 12:57:33 basehttp "GET /add/ HTTP/1.1" 500 83991
+INFO 17-02-2024 13:02:55 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:03:02 basehttp "GET /add/ HTTP/1.1" 200 1594
+INFO 17-02-2024 13:03:23 basehttp "GET /edit/1/ HTTP/1.1" 200 1835
+WARNING 17-02-2024 13:03:42 log Not Found: /media/Add image
+WARNING 17-02-2024 13:03:42 basehttp "GET /media/Add%20image HTTP/1.1" 404 3440
+WARNING 17-02-2024 13:04:23 log Not Found: /media/Add image
+WARNING 17-02-2024 13:04:23 basehttp "GET /media/Add%20image HTTP/1.1" 404 3440
+ERROR 17-02-2024 13:04:28 log Internal Server Error: /edit/1/
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Developer\Django\Django_HP2\web_store\store_app\views.py", line 95, in edit_product
+    return redirect('product_list')
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 179, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'product_list' not found. 'product_list' is not a valid view function or pattern name.
+ERROR 17-02-2024 13:04:28 basehttp "POST /edit/1/ HTTP/1.1" 500 89392
+INFO 17-02-2024 13:07:36 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\urls.py changed, reloading.
+INFO 17-02-2024 13:07:36 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:08:40 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:08:41 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:09:33 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:09:34 basehttp "GET / HTTP/1.1" 200 461
+WARNING 17-02-2024 13:09:37 log Not Found: /about
+WARNING 17-02-2024 13:09:37 basehttp "GET /about HTTP/1.1" 404 3364
+INFO 17-02-2024 13:09:45 basehttp "GET /add/ HTTP/1.1" 200 1594
+WARNING 17-02-2024 13:10:04 log Not Found: /product_list
+WARNING 17-02-2024 13:10:04 basehttp "GET /product_list HTTP/1.1" 404 3385
+INFO 17-02-2024 13:10:28 basehttp "GET /list HTTP/1.1" 301 0
+ERROR 17-02-2024 13:10:28 log Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Developer\Django\Django_HP2\web_store\store_app\views.py", line 109, in fetch_product_list
+    return render(request, 'store_app/product_list.html', {'products': products})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 325, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 241, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\defaulttags.py", line 478, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'product_view' not found. 'product_view' is not a valid view function or pattern name.
+ERROR 17-02-2024 13:10:28 basehttp "GET /list/ HTTP/1.1" 500 201161
+INFO 17-02-2024 13:15:07 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:15:08 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:15:15 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:15:34 basehttp "GET /edit/1/ HTTP/1.1" 200 1857
+INFO 17-02-2024 13:15:39 basehttp "GET /media/images/6725265116.jpg HTTP/1.1" 200 9807
+INFO 17-02-2024 13:15:57 basehttp "POST /edit/1/ HTTP/1.1" 200 1747
+INFO 17-02-2024 13:16:04 basehttp "POST /edit/1/ HTTP/1.1" 200 1747
+INFO 17-02-2024 13:26:28 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:26:29 basehttp "GET / HTTP/1.1" 200 461
+INFO 17-02-2024 13:26:46 basehttp "GET /edit/2 HTTP/1.1" 301 0
+INFO 17-02-2024 13:26:46 basehttp "GET /edit/2/ HTTP/1.1" 200 1827
+INFO 17-02-2024 13:27:06 basehttp "POST /edit/2/ HTTP/1.1" 200 461
+INFO 17-02-2024 13:30:51 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:30:52 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:31:09 basehttp "GET /edit/1/ HTTP/1.1" 200 1887
+INFO 17-02-2024 13:31:22 basehttp "POST /edit/1/ HTTP/1.1" 200 1843
+INFO 17-02-2024 13:31:39 basehttp "POST /edit/1/ HTTP/1.1" 200 461
+INFO 17-02-2024 13:32:43 basehttp "GET / HTTP/1.1" 200 461
+INFO 17-02-2024 13:32:47 basehttp "GET / HTTP/1.1" 200 461
+INFO 17-02-2024 13:38:48 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:38:49 autoreload Watching for file changes with StatReloader
+ERROR 17-02-2024 13:38:59 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Developer\Django\Django_HP2\web_store\store_app\views.py", line 12, in index
+    return render(request, 'index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 17-02-2024 13:38:59 basehttp "GET / HTTP/1.1" 500 83321
+INFO 17-02-2024 13:40:40 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:40:40 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:40:47 basehttp "GET / HTTP/1.1" 200 461
+INFO 17-02-2024 13:41:01 basehttp "GET /edit/3/ HTTP/1.1" 200 1820
+INFO 17-02-2024 13:41:31 basehttp "POST /edit/3/ HTTP/1.1" 200 461
+INFO 17-02-2024 13:43:41 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:43:41 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:43:48 basehttp "GET /edit/3/ HTTP/1.1" 200 1890
+INFO 17-02-2024 13:44:10 basehttp "POST /edit/3/ HTTP/1.1" 200 461
+INFO 17-02-2024 13:48:01 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:48:02 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:48:40 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:48:40 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:48:48 basehttp "GET /edit/3/ HTTP/1.1" 200 1890
+INFO 17-02-2024 13:49:00 basehttp "POST /edit/3/ HTTP/1.1" 200 1817
+INFO 17-02-2024 13:49:12 basehttp "POST /edit/3/ HTTP/1.1" 200 503
+INFO 17-02-2024 13:50:05 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:50:05 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:51:02 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:51:02 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:55:56 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:55:57 autoreload Watching for file changes with StatReloader
+INFO 17-02-2024 13:57:25 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\views.py changed, reloading.
+INFO 17-02-2024 13:57:25 autoreload Watching for file changes with StatReloader
