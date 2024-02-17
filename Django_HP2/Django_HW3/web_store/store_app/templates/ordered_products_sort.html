@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Заказанные {{ customer.name }} товары.</h1>
+    {% if num_days %}
+        <h2>За последние {{ num_days }} дней:</h2>
+        <ul>
+            {% for product in products %}
+                <li>{{ product.name }}</li>
+            {% empty %}
+                <li>Нет заказанных товаров</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>За последнюю неделю:</h2>
+        <ul>
+            {% for product in products_week %}
+                <li>{{ product.name }}</li>
+            {% empty %}
+                <li>Нет заказанных товаров</li>
+            {% endfor %}
+        </ul>
+        <h2>За последний месяц:</h2>
+        <ul>
+            {% for product in products_month %}
+                <li>{{ product.name }}</li>
+            {% empty %}
+                <li>Нет заказанных товаров</li>
+            {% endfor %}
+        </ul>
+        <h2>За последний год:</h2>
+        <ul>
+            {% for product in products_year %}
+                <li>{{ product.name }}</li>
+            {% empty %}
+                <li>Нет заказанных товаров</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock %}

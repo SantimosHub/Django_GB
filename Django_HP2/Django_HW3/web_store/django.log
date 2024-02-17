@@ -1,0 +1,12 @@
+INFO 15-02-2024 13:53:56 autoreload Watching for file changes with StatReloader
+INFO 15-02-2024 13:54:37 autoreload E:\Developer\Django\Django_HP2\web_store\store_app\urls.py changed, reloading.
+INFO 15-02-2024 13:54:42 autoreload Watching for file changes with StatReloader
+INFO 15-02-2024 13:54:53 basehttp "GET / HTTP/1.1" 200 457
+WARNING 15-02-2024 13:54:53 log Not Found: /favicon.ico
+WARNING 15-02-2024 13:54:53 basehttp "GET /favicon.ico HTTP/1.1" 404 2716
+INFO 15-02-2024 15:15:22 autoreload Watching for file changes with StatReloader
+INFO 15-02-2024 15:15:25 basehttp "GET / HTTP/1.1" 200 457
+INFO 15-02-2024 15:16:19 basehttp "GET /customer-orders/1 HTTP/1.1" 200 488
+INFO 15-02-2024 15:16:29 basehttp "GET /customer-orders/2 HTTP/1.1" 200 488
+INFO 15-02-2024 15:16:36 basehttp "GET /customer-orders/3 HTTP/1.1" 200 792
+INFO 15-02-2024 15:17:11 basehttp "GET /ordered-products-by-period/3 HTTP/1.1" 200 1224
